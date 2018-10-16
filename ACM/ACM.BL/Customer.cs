@@ -7,8 +7,19 @@ namespace ACM.BL
     {
         #region "Variables"
 
-        private string _lastName;
+        #endregion
 
+        #region "Constructors"
+        public Customer():this(0)
+        {
+            //Default Constructor
+        }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+
+        }
         #endregion
 
         #region "Properties"
