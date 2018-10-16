@@ -72,7 +72,7 @@ namespace ACM.BLTest
             Assert.Equal(3, Customer.InstanceCount);
 
         }
-
+               
         [Fact]
         public void FullNameLastNameEmptyTest()
         {
@@ -87,6 +87,41 @@ namespace ACM.BLTest
             //--Act
             string actual = customer.FullName;
 
+
+            //--Assert
+            Assert.Equal(expected, actual);
+
+        }
+
+        [Fact]
+        public void ValidateValid()
+        {
+            //--Arrange
+            Customer customer1 = new Customer();
+            customer1.LastName = "Baggins";
+            customer1.EmailAddress = "fbaggins@hobbiton.me";
+
+            var expected = true;
+
+            //--Act
+            var actual = customer1.Validate();
+            
+            //--Assert
+            Assert.Equal(expected, actual);
+
+        }
+
+        [Fact]
+        public void ValidateMissingLastName()
+        {
+            //--Arrange
+            Customer customer1 = new Customer();
+            customer1.EmailAddress = "fbaggins@hobbiton.me";
+
+            var expected = false;
+
+            //--Act
+            var actual = customer1.Validate();
 
             //--Assert
             Assert.Equal(expected, actual);
