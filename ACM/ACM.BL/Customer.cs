@@ -32,9 +32,15 @@ namespace ACM.BL
         {
             get
             {
-                return LastName + "," + FirstName;
+                if (!String.IsNullOrEmpty(FirstName) && !String.IsNullOrEmpty(LastName))
+                    return LastName + ", " + FirstName;
+                else if (!String.IsNullOrEmpty(LastName) && String.IsNullOrEmpty(FirstName))
+                    return LastName;
+                else
+                    return FirstName;
             }
         }
         #endregion
     }
 }
+ 
