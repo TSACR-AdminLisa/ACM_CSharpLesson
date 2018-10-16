@@ -47,6 +47,33 @@ namespace ACM.BLTest
         }
 
         [Fact]
+        public void StaticTest()
+        {
+            //--Arrange
+            Customer customer1 = new Customer();
+            customer1.FirstName = "Baggins";
+            Customer.InstanceCount += 1;
+
+            Customer customer2 = new Customer();
+            customer2.FirstName = "Frodo";
+            Customer.InstanceCount += 1;
+
+            Customer customer3 = new Customer();
+            customer3.FirstName = "Rosie";
+            Customer.InstanceCount += 1;
+
+            //string expected1 = "Baggins";
+
+            //--Act
+            //string actual = customer.FullName;
+
+
+            //--Assert
+            Assert.Equal(3, Customer.InstanceCount);
+
+        }
+
+        [Fact]
         public void FullNameLastNameEmptyTest()
         {
             //--Arrange

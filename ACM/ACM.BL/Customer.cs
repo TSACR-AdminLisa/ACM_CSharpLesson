@@ -11,21 +11,10 @@ namespace ACM.BL
         #endregion
 
         #region "Properties"
-
+        
+        public static int InstanceCount { get; set; }
         public string FirstName { get; set; }
-
-        public string LastName
-        {
-            get
-            {
-                return _lastName;
-            }
-            set
-            {
-                _lastName = value;
-            }
-        }
-
+        public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public int CustomerId { get; private set; }
         public string FullName
