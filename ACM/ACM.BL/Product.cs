@@ -49,7 +49,6 @@ namespace ACM.BL
             return isValid;
         }
 
-
         #endregion
 
     }
