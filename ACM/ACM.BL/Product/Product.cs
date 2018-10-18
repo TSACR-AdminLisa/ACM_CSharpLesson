@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Acme.Common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,12 @@ namespace ACM.BL
 {
     public class Product : EntityBase
     {
+        #region "Variables"
+
+        private string _productName;
+
+        #endregion
+
         #region "Constructors"
         public Product() : this(0)
         {
@@ -23,7 +30,17 @@ namespace ACM.BL
         public Decimal? CurrentPrice { get; set; }
         public int ProductId { get; private set; }
         public string ProductDescription { get; set; }
-        public string ProductName { get; set; }
+        public string ProductName
+        {
+            get
+            {
+                return _productName.InsertSpaces();
+            }
+            set
+            {
+                _productName = value;
+            }
+        }
 
         #endregion
 
