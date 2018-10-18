@@ -28,17 +28,7 @@ namespace ACM.BL
         #endregion
 
         #region "Functions"
-
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
+        
         public bool Validate()
         {
             var isValid = true;

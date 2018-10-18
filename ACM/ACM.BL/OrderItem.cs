@@ -31,16 +31,7 @@ namespace ACM.BL
         #endregion
 
         #region "Functions and Methods"
-        public OrderItem Retrieve(int orderItemId)
-        {
-            return new OrderItem();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
+       
         public bool Validate()
         {
             var isValid = true;

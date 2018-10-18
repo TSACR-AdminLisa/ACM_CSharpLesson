@@ -18,7 +18,7 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
-
+            this.AddressList = new List<Address>();
         }
         #endregion
 
@@ -27,6 +27,7 @@ namespace ACM.BL
         public static int InstanceCount { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public List<Address> AddressList { get; set; }
         public string EmailAddress { get; set; }
         public int CustomerId { get; private set; }
         public string FullName
@@ -48,16 +49,6 @@ namespace ACM.BL
         public Customer Retrieve(int customerId)
         {
             return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            return true;
         }
 
         public bool Validate()
