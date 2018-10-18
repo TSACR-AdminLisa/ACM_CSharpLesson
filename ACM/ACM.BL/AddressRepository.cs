@@ -47,9 +47,22 @@ namespace ACM.BL
             return addressList;
         }
 
-        public bool Save()
+        public bool Save(Address address)
         {
-            return true;
+            var success = true;
+
+            if (address.HasChanges && address.IsValid)
+            {
+                if (address.IsNew)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            return success;
         }
 
         #endregion

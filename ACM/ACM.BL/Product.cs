@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         #region "Constructors"
         public Product() : this(0)
@@ -29,7 +29,7 @@ namespace ACM.BL
 
         #region "Functions"
         
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
@@ -37,6 +37,11 @@ namespace ACM.BL
             if (CurrentPrice == null) isValid = false;
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return ProductName;
         }
 
         #endregion

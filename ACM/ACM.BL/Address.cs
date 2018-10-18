@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
         #region "Variables"
         #endregion
@@ -35,6 +35,22 @@ namespace ACM.BL
         #endregion
 
         #region "Functions and Methods"
+
+        public override bool Validate()
+        {
+            var isValid = true;
+
+            if (AddressType <= 0) isValid = false;
+            if (String.IsNullOrWhiteSpace(StreetLine1)) isValid = false;
+            if (String.IsNullOrWhiteSpace(StreetLine2)) isValid = false;
+            if (String.IsNullOrWhiteSpace(City)) isValid = false;
+            if (String.IsNullOrWhiteSpace(State)) isValid = false;
+            if (String.IsNullOrWhiteSpace(PostalCode)) isValid = false;
+            if (String.IsNullOrWhiteSpace(Country)) isValid = false;
+
+            return isValid;
+        }
+
         #endregion
     }
 }

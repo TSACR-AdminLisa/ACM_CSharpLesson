@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         #region "Variables"
 
@@ -46,13 +46,8 @@ namespace ACM.BL
         #endregion
 
         #region "Functions"
-
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        public bool Validate()
+        
+        public override bool Validate()
         {
             var isValid = true;
 
@@ -60,6 +55,11 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return FullName;
         }
 
         #endregion

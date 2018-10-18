@@ -45,9 +45,22 @@ namespace ACM.BL
             return new List<Customer>();
         }
 
-        public bool Save()
+        public bool Save(Customer customer)
         {
-            return true;
+            var success = true;
+
+            if (customer.HasChanges && customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            return success;
         }
 
         #endregion

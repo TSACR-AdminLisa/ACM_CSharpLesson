@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Order
+    public sealed class Order : EntityBase
     {
         #region "Constructores"
 
@@ -32,13 +32,18 @@ namespace ACM.BL
 
         #region "Functionality"
         
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
 
             if (OrderDate == null) isValid = false;
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return OrderDate.Value.Date + " (" + OrderId + ")";
         }
 
         #endregion
