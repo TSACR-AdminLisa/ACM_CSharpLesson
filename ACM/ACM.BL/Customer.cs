@@ -24,6 +24,7 @@ namespace ACM.BL
 
         #region "Properties"
 
+        public int CustomerType { get; set; }
         public static int InstanceCount { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

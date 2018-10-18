@@ -15,18 +15,22 @@ namespace ACM.BL
         public Order(int orderId)
         {
             this.OrderId = orderId;
+            OrderItems = new List<OrderItem>();
         }
 
         #endregion
 
         #region "Properties"
 
+        public int CustomerId { get; set; } //CustomerId Relationship
+        public int ShippingAddressId { get; set; } //AddressId Relationship
         public DateTimeOffset? OrderDate { get; set; }
-        public int OrderId { get; private set; }
+        public int OrderId { get; private set; } //OrderId Relationship
+        public List<OrderItem> OrderItems { get; set; }
 
         #endregion
 
-        #region "Functions"
+        #region "Functionality"
         
         public bool Validate()
         {
