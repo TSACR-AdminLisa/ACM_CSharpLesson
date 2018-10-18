@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Acme.Common.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         #region "Variables"
 
@@ -60,6 +61,13 @@ namespace ACM.BL
         public override string ToString()
         {
             return FullName;
+        }
+
+        public string Log()
+        {
+            return this.CustomerId + ": " + this.FullName + " " +
+                   "Email: " + this.EmailAddress + " " +
+                   "Status: " + this.EntityState.ToString();
         }
 
         #endregion

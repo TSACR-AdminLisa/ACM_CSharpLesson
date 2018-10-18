@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Acme.Common.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ACM.BL
 {
-    public sealed class Order : EntityBase
+    public sealed class Order : EntityBase, ILoggable
     {
         #region "Constructores"
 
@@ -44,6 +45,13 @@ namespace ACM.BL
         public override string ToString()
         {
             return OrderDate.Value.Date + " (" + OrderId + ")";
+        }
+
+        public string Log()
+        {
+            return this.OrderId + ": " +
+                   "Date: " + this.OrderDate.Value.Date + " " +
+                   "Status: " + this.EntityState.ToString();
         }
 
         #endregion

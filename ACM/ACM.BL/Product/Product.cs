@@ -1,11 +1,12 @@
 ﻿using Acme.Common;
+using Acme.Common.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         #region "Variables"
 
@@ -59,6 +60,14 @@ namespace ACM.BL
         public override string ToString()
         {
             return ProductName;
+        }
+
+        public string Log()
+        {
+            return this.ProductId + ": " + 
+                   this.ProductName + " " +
+                   "Detail: " + this.ProductDescription + " " +
+                   "Status: " + this.EntityState.ToString();
         }
 
         #endregion
