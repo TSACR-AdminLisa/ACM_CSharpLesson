@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.BL
+namespace ACM.BL.Payments
 {
     public class PaymentRepository
     {

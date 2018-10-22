@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.BL
+namespace ACM.BL.Orders
 {
     public class OrderRepository
     {
+        public void Add(Order order)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

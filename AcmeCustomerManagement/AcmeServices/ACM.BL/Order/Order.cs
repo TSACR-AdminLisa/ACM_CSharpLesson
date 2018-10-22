@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.BL
+namespace ACM.BL.Orders
 {
     public class Order
     {
+
     }
 }

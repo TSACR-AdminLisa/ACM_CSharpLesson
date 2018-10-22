@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ACM.BL
+namespace ACM.BL.Customers
 {
     public class Customer
     {
@@ -10,6 +10,11 @@ namespace ACM.BL
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        public void ValidateEmail()
+        {
+            throw new NotImplementedException();
+        }
 
         #endregion
     }

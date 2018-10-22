@@ -2,9 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ACM.BL
+namespace ACM.BL.Customers
 {
-    class CustomerRepository
+    public class CustomerRepository
     {
+
+        public bool Add(Customer customer)
+        {
+            return true;
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
