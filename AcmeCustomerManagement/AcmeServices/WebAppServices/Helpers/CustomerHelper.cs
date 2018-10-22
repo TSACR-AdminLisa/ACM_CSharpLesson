@@ -13,12 +13,8 @@ namespace WebAppServices.Helpers
 {
     public class CustomerHelper
     {
-        public void Ejecutar()
-        {
-            PlaceOrder();
-        }
 
-        private void PlaceOrder()
+        public void PlaceOrder()
         {
             var customer = new Customer();
             //populate the customer instance

@@ -26,8 +26,9 @@ namespace WebAppServices.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] string stepGoalToday, [FromBody] string noStepsToday)
         {
+
         }
 
         // PUT api/values/5
