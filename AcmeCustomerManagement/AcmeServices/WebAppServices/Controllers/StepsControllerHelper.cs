@@ -10,7 +10,6 @@ namespace WebAppServices.Controllers
         public decimal CalculateStepGoalReach(string stepsGoal, string actualSteps)
         {
             #region "Break Fast Validations"
-
             if (string.IsNullOrWhiteSpace(stepsGoal) || string.IsNullOrEmpty(stepsGoal)) throw new ArgumentException("Goal must be entered", "Goal Steps");
             if (string.IsNullOrWhiteSpace(actualSteps) || string.IsNullOrEmpty(actualSteps)) throw new ArgumentException("The number of steps you made during the day must be entered", "Number Steps Goal");
 
@@ -26,8 +25,10 @@ namespace WebAppServices.Controllers
         {
             decimal result = 0;
 
+            #region "Break Fast Validations"
             if (stepsGoal <= 0) throw new ArgumentException("Goal must be a numeric value greater than zero", "Goal Steps");
             if (actualSteps < 0) throw new ArgumentException("The number of steps you made during the day must be a numeric value greater or equal to zero", "Number Steps Goal");
+            #endregion
 
             if (stepsGoal > 0 && actualSteps >= 0)
             {
