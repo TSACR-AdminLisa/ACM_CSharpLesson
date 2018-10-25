@@ -4,9 +4,9 @@ namespace Core.Common
 {
     public class EmailLibrary
     {
-        public void SendEmail(string emailAddress, string v)
+        public bool SendEmail(string emailAddress, string message)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

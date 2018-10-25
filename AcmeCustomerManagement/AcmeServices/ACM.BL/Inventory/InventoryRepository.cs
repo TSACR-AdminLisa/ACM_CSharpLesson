@@ -7,9 +7,9 @@ namespace ACM.BL.Inventories
 {
     public class InventoryRepository
     {
-        public void OrderItems(Order order, bool allowSplitOrders)
+        public bool OrderItems(Order order, bool allowSplitOrders)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

@@ -6,9 +6,9 @@ namespace ACM.BL.Orders
 {
     public class OrderRepository
     {
-        public void Add(Order order)
+        public bool Add(Order order)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
