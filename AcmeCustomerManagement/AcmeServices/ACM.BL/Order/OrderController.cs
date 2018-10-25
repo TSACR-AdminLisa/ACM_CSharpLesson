@@ -42,11 +42,14 @@ namespace ACM.BL.Orders
 
             if (emailReceipt)
             {
-                customer.ValidateEmail();
-                customerRepository.Update();
+                var result = customer.ValidateEmailObject();
+                if (result.Success)
+                {
+                    customerRepository.Update();
 
-                var emailLibrary = new EmailLibrary();
-                emailLibrary.SendEmail(customer.EmailAddress, "Her is your receipt!");
+                    var emailLibrary = new EmailLibrary();
+                    emailLibrary.SendEmail(customer.EmailAddress, "Her is your receipt!");
+                }
             }
         }
 
